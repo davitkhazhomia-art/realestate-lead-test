@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 5-Minute Real Estate Lead Leak Test</title>
+<meta name="description" content="A quick test to find out whether your real estate follow-up system is leaking leads.">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f7f7f5;color:#171717;line-height:1.55}
+.wrap{max-width:760px;margin:auto;padding:24px}.hero{padding:58px 0 28px}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#171717;color:#fff;padding:7px 11px;border-radius:999px}
+h1{font-size:clamp(40px,8vw,68px);line-height:.98;letter-spacing:-.045em;margin:18px 0}.lead{font-size:20px;max-width:650px;color:#4a4a4a}
+.card{background:#fff;border:1px solid #deded8;border-radius:18px;padding:28px;margin:28px 0;box-shadow:0 8px 30px rgba(0,0,0,.05)}
+h2{font-size:26px;margin-top:0}label{display:block;padding:14px 0;border-bottom:1px solid #eee;font-size:17px;cursor:pointer}
+input{width:20px;height:20px;vertical-align:-4px;margin-right:10px}button,.cta{display:block;width:100%;border:0;border-radius:12px;padding:16px 18px;font-size:17px;font-weight:800;cursor:pointer;text-align:center;text-decoration:none}
+button{background:#171717;color:#fff;margin-top:20px}.result{display:none;margin-top:22px;padding:18px;border-radius:12px;background:#f0f0eb}.cta{background:#171717;color:#fff;margin-top:16px}
+.steps{display:grid;gap:12px}.step{padding:16px;background:#fafaf8;border-radius:12px}.num{font-weight:900}footer{font-size:13px;color:#666;padding:10px 0 50px}
+</style>
+</head>
+<body>
+<main class="wrap">
+<section class="hero"><span class="tag">For real estate agents</span>
+<h1>You may not need more leads.</h1>
+<p class="lead">You may need to stop losing the leads you already have. Take this 60-second test to find the leaks in your follow-up process.</p></section>
+
+<section class="card"><h2>The 5-Minute Lead Leak Test</h2><p>Check every statement that is true for your business.</p>
+<label><input type="checkbox">A new lead gets an immediate response, even when I'm unavailable.</label>
+<label><input type="checkbox">Every new lead receives multiple follow-ups automatically.</label>
+<label><input type="checkbox">My system asks basic qualifying questions before I spend my time.</label>
+<label><input type="checkbox">Hot leads are clearly identified and pushed to me quickly.</label>
+<label><input type="checkbox">A qualified lead can book a call or showing without back-and-forth.</label>
+<button onclick="score()">Show my result</button>
+<div id="result" class="result"><strong id="scoreTitle"></strong><p id="scoreText"></p>
+<a class="cta" href="https://gohighlevel.com/annual?fp_ref=davit-f749c5" target="_blank" rel="nofollow sponsored noopener">See a system that can automate this workflow →</a></div>
+</section>
+
+<section class="card"><h2>What a good system should do</h2><div class="steps">
+<div class="step"><span class="num">1. Respond fast.</span> Start the conversation while the lead is still paying attention.</div>
+<div class="step"><span class="num">2. Qualify.</span> Collect budget, location, timeline and intent.</div>
+<div class="step"><span class="num">3. Follow up.</span> Keep the conversation alive without manually remembering every lead.</div>
+<div class="step"><span class="num">4. Escalate.</span> Put serious prospects in front of the agent quickly.</div>
+<div class="step"><span class="num">5. Book.</span> Make the next step — call or showing — easy.</div>
+</div></section>
+
+<section class="card"><h2>The simple flow</h2>
+<p><strong>New lead → instant response → qualification → follow-up → appointment → human agent</strong></p>
+<p> The point isn't to replace the agent. It's to make sure a good lead doesn't disappear because nobody followed up.</p></section>
+<footer>Affiliate disclosure: This page contains an affiliate link. If you purchase through the link, I may receive a commission at no additional cost to you.</footer>
+</main>
+<script>
+function score(){
+const n=document.querySelectorAll('input[type="checkbox"]:checked').length;
+const title=document.getElementById('scoreTitle'),text=document.getElementById('scoreText');
+if(n===5){title.textContent="5/5 — Your follow-up foundation is strong.";text.textContent="You're already covering the basics. The next opportunity is measuring conversion and improving the quality of your conversations.";}
+else if(n>=3){title.textContent=n+"/5 — You have some protection, but there are leaks.";text.textContent="Automating the missing steps can help you respond consistently and spend more time on qualified prospects.";}
+else{title.textContent=n+"/5 — You probably have a lead-follow-up leak.";text.textContent="Before buying more leads, fix the process that handles the leads you already receive.";}
+document.getElementById('result').style.display='block';document.getElementById('result').scrollIntoView({behavior:'smooth',block:'center'});
+}
+</script>
+</body></html>
