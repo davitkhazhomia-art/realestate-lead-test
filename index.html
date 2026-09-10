@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free Property Lead Leak Test | UK Estate Agencies</title>
+<meta name="description" content="Find where your estate agency may be losing property enquiries between first contact and booked appointment. Free 5-minute diagnostic.">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7fa;color:#172033;line-height:1.5}
+.wrap{max-width:900px;margin:auto;padding:28px 18px 60px}
+.hero{background:#111827;color:#fff;border-radius:22px;padding:52px 34px;text-align:center}
+.eyebrow{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#a7f3d0;font-weight:700}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.04;margin:14px 0}
+.hero p{max-width:650px;margin:18px auto 0;color:#d1d5db;font-size:18px}
+.card{background:#fff;border-radius:18px;padding:28px;margin-top:20px;box-shadow:0 8px 30px rgba(15,23,42,.07)}
+.progress{height:8px;background:#e5e7eb;border-radius:20px;overflow:hidden;margin-bottom:24px}
+.bar{height:100%;width:0;background:#111827;transition:.25s}
+.qnum{font-size:13px;color:#6b7280;font-weight:700;text-transform:uppercase;letter-spacing:.8px}
+h2{font-size:25px;margin:8px 0 20px}
+.option{display:block;border:1px solid #dbe1ea;border-radius:12px;padding:15px 16px;margin:10px 0;cursor:pointer}
+.option:hover{border-color:#111827;background:#f9fafb}
+.option input{margin-right:10px}
+button{border:0;border-radius:11px;padding:14px 22px;background:#111827;color:#fff;font-size:16px;font-weight:700;cursor:pointer}
+button:disabled{opacity:.45;cursor:not-allowed}
+.next{margin-top:14px;width:100%}
+.score{text-align:center}
+.scoreCircle{width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:20px auto;background:#f3f4f6;border:10px solid #111827}
+.scoreCircle strong{font-size:42px}
+.result{font-size:20px;font-weight:800;margin:12px 0}
+.small{font-size:14px;color:#6b7280}
+.leaks{text-align:left;margin:22px 0}
+.leak{padding:12px 14px;background:#f8fafc;border-left:4px solid #111827;margin:8px 0;border-radius:6px}
+.hidden{display:none}
+.cta{text-align:center;margin:26px 0 10px}
+.cta button{padding:15px 24px}
+.formWrap{margin-top:22px}
+.formBox{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:10px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.footer{text-align:center;color:#6b7280;font-size:12px;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section class="hero">
+<div class="eyebrow">For UK Estate Agencies</div>
+<h1>Where Are Your Property Enquiries Leaking?</h1>
+<p>Find out in 5 minutes — for free. See where enquiries may be getting lost between first contact and a booked appointment.</p>
+</section>
+
+<section class="card" id="testCard">
+<div class="progress"><div class="bar" id="bar"></div></div>
+<div id="questionArea"></div>
+<button class="next" id="nextBtn" disabled>Next</button>
+</section>
+
+<section class="card hidden" id="resultCard">
+<div class="score">
+<div class="qnum">Your Lead Leak Score</div>
+<div class="scoreCircle"><strong id="scoreValue">0</strong></div>
+<div class="result" id="resultTitle"></div>
+<p id="resultText"></p>
+</div>
+
+<div class="leaks" id="leaks"></div>
+
+<div class="cta">
+<a href="https://api.leadconnectorhq.com/widget/form/PHj9eUjYlvmXxszuyCHQ"
+   style="display:inline-block;border-radius:11px;padding:15px 24px;background:#111827;color:#fff;font-size:16px;font-weight:700;text-decoration:none;">
+   Get My Free Lead Recovery Review →
+</a>
+</div>
+
+<div id="reviewForm" class="formWrap hidden">
+  <div class="formBox" style="padding:28px;text-align:center;">
+    <p style="margin-top:0;font-size:17px;">Your free Lead Recovery Review request is ready.</p>
+    <a href="https://api.leadconnectorhq.com/widget/form/PHj9eUjYlvmXxszuyCHQ" target="_blank" rel="noopener" style="display:inline-block;border-radius:11px;padding:15px 24px;background:#111827;color:#fff;font-size:16px;font-weight:700;text-decoration:none;">Open Lead Recovery Review Form →</a>
+  </div>
+</div>
+
+<p class="small">This test is a screening tool, not a financial guarantee. Any commercial opportunity estimate should be based on your actual enquiry and conversion data.</p>
+</section>
+
+<div class="footer">© 2026 Lead Recovery System · Free diagnostic for UK estate agencies</div>
+</div>
+
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+<script>
+const questions=[
+{title:"How quickly does your team respond to a new enquiry?",opts:[["Under 5 minutes",25],["5–15 minutes",20],["15–60 minutes",12],["1–4 hours",5],["4+ hours / next day",0]]},
+{title:"If a lead doesn't respond, what happens next?",opts:[["Automated multi-step follow-up",25],["Structured manual follow-up",18],["Follow-up happens sometimes",8],["Usually one attempt",3],["Nothing consistent",0]]},
+{title:"Does every enquiry have a named owner and a clear next action?",opts:[["Always",15],["Usually",10],["Sometimes",5],["No",0]]},
+{title:"Do you consistently capture key qualification information?",opts:[["Automatically and consistently",15],["Manually but consistently",10],["Inconsistently",5],["No structured qualification",0]]},
+{title:"Can a qualified lead book a viewing, valuation or call without waiting for an agent?",opts:[["Yes, automatically",10],["Partly",5],["No",0]]},
+{title:"What happens to enquiries that arrive outside office hours?",opts:[["Automated response + qualification + booking",10],["Immediate acknowledgement only",5],["Handled the next working day",2],["Nothing",0]]},
+{title:"Approximately how many inbound enquiries does your agency receive per month?",opts:[["0–25",0],["26–50",0],["51–100",0],["100+",0]]}
+];
+
+let current=0,answers=[];
+const area=document.getElementById("questionArea");
+const next=document.getElementById("nextBtn");
+const bar=document.getElementById("bar");
+
+function render(){
+const q=questions[current];
+area.innerHTML='<div class="qnum">Question '+(current+1)+' of '+questions.length+'</div><h2>'+q.title+'</h2>'+
+q.opts.map(o=>'<label class="option"><input type="radio" name="answer" value="'+o[1]+'" data-label="'+o[0]+'"> '+o[0]+'</label>').join('');
+next.disabled=true;
+next.textContent=current===questions.length-1?"See My Score":"Next";
+bar.style.width=(current/questions.length*100)+"%";
+document.querySelectorAll('input[name="answer"]').forEach(x=>x.addEventListener("change",()=>next.disabled=false));
+}
+
+next.addEventListener("click",()=>{
+const s=document.querySelector('input[name="answer"]:checked');
+if(!s)return;
+answers[current]={score:Number(s.value),label:s.dataset.label};
+if(current<questions.length-1){current++;render()}else{showResult()}
+});
+
+function showResult(){
+const total=answers.reduce((s,a)=>s+a.score,0);
+document.getElementById("testCard").classList.add("hidden");
+document.getElementById("resultCard").classList.remove("hidden");
+document.getElementById("scoreValue").textContent=total;
+
+let title,text;
+if(total>=80){
+title="Strong lead-conversion process";
+text="Your fundamentals look strong. The next opportunity is usually optimisation, speed and consistency.";
+}else if(total>=60){
+title="At Risk — some leakage is likely";
+text="You have a workable process, but several points between enquiry and appointment may still depend too heavily on people.";
+}else if(total>=40){
+title="Significant Leakage";
+text="There are several areas where enquiries may be going cold, delayed or left without a clear next action.";
+}else{
+title="Critical Leakage";
+text="Your current process has multiple high-risk gaps between first contact and appointment.";
+}
+
+document.getElementById("resultTitle").textContent=title;
+document.getElementById("resultText").textContent=text;
+
+const names=["Response speed","Follow-up consistency","Lead ownership","Qualification","Appointment booking","After-hours coverage"];
+const threshold=[20,20,10,10,5,5];
+const max=[25,25,15,15,10,10];
+
+const leaks=answers.slice(0,6).map((a,i)=>({name:names[i],score:a.score,max:max[i],threshold:threshold[i]}))
+.filter(x=>x.score<x.threshold);
+
+document.getElementById("leaks").innerHTML=leaks.length
+?"<strong>Priority areas to review:</strong>"+leaks.map(x=>'<div class="leak"><strong>'+x.name+'</strong> — '+x.score+'/'+x.max+' points</div>').join("")
+:"<div class='leak'><strong>No major red flags detected in this screening.</strong> A deeper review can still identify optimisation opportunities.</div>";
+}
+
+
+
+render();
+</script>
+</body>
+</html>
